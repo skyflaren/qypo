@@ -30,11 +30,12 @@ def index(request):
         if form.is_valid():
             
             arr = request.POST.get("inputted_text").split("\n")
-
+            if(arr[len(arr)-1] == "\n"):
+                arr.pop();
             ret = "{"
 
             for i in range(len(arr)):
-                ret = ret + "\"" + arr[i][0:len(arr[i])-1] + "\"";
+                ret = ret + "\"" + arr[i][0:len(arr[i])].strip() + "\"";
                 if(i != len(arr)-1):
                     ret = ret + ", ";
             ret = ret + "}";

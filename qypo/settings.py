@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from qypo import config
 import os
 from dotenv import load_dotenv
 

@@ -30,8 +30,7 @@ def index(request):
         if form.is_valid():
             
             arr = request.POST.get("inputted_text").split("\n")
-            if(arr[len(arr)-1] == "\n"):
-                arr.pop();
+            if(arr[-1].strip() == ""): arr.pop();
             ret = "{"
 
             for i in range(len(arr)):

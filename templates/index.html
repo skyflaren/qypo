@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <title>qypome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <form action="/" method="post" class="form-group">
+    <span class="instruct">paste to array-ify</span>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="go!" class="button" name="inputted">
+  </form>
+  <span class="footer"><a href="https://github.com/skyflaren">qypress</a></span>
+</body>
+
+</html>
